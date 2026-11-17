@@ -1,0 +1,18 @@
+{
+  "realm": "portfolio",
+  "enabled": true,
+  "roles": { "realm": [ {"name":"viewer"}, {"name":"admin"} ] },
+  "clients": [{
+    "clientId": "portfolio-cli", "enabled": true,
+    "publicClient": true, "directAccessGrantsEnabled": true,
+    "standardFlowEnabled": false
+  }],
+  "users": [
+    {"username":"viewer", "enabled":true, "emailVerified":true,
+     "credentials":[{"type":"password","value":"viewer-local-only","temporary":false}],
+     "realmRoles":["viewer"]},
+    {"username":"admin-demo", "enabled":true, "emailVerified":true,
+     "credentials":[{"type":"password","value":"admin-local-only","temporary":false}],
+     "realmRoles":["viewer","admin"]}
+  ]
+}

@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: oidc-rbac-demo
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OIDC_ISSUER_URI:http://localhost:8081/realms/portfolio}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
